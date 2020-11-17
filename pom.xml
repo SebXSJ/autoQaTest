@@ -11,6 +11,7 @@
 
     <modules>
         <module>qajunit</module>
+        <module>qagui</module>
     </modules>
 
     <properties>
@@ -25,6 +26,8 @@
         <jackson-module-jaxb-annotations>2.11.3</jackson-module-jaxb-annotations>
         <allure-maven>2.10.0</allure-maven>
         <allure>2.13.6</allure>
+        <selenium-java>3.141.59</selenium-java>
+        <guava>27.1-jre</guava>
     </properties>
 
     <dependencyManagement>
@@ -112,6 +115,29 @@
                 <artifactId>allure-maven</artifactId>
                 <version>${allure-maven}</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${selenium-java}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-api</artifactId>
+                <version>${selenium-java}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava}</version>
+            </dependency>
+
+
+
+
 
         </dependencies>
     </dependencyManagement>
