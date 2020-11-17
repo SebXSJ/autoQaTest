@@ -1,4 +1,25 @@
 package pl.jsystems.qa.qagui.classic.page;
 
-public class MainUserPage {
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class MainUserPage extends BasicPage {
+
+    public MainUserPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(className = "empty-content__title")
+    public WebElement welcomeText;
+//    public WebElement welcomeText = driver.findElement(By.className("empty-content__title"));
+
+    @FindBy(css = ".masterbar__item.masterbar__item-me")
+    public WebElement userAvatar;
+//    public WebElement userAvatar = driver.findElement(By.cssSelector(".masterbar__item.masterbar__item-me"));
+
 }
+
